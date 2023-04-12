@@ -3,6 +3,8 @@ import Footer from './components/Footer';
 import Header from './components/Header';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
+import NavLinks from './components/NavLinks';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 const App = () => {
   const [projects, setProjects] = useState([])
@@ -14,14 +16,17 @@ const App = () => {
   }, [])
 
   return (
-    <>
-      <Header />
-      <main>
-        <Resume />
-        <Projects projects={projects}  />
-      </main>
-      <Footer  />
-    </>
+    <Router>
+      <div>
+        <Header />
+        <NavLinks  />
+        <Routes>
+          <Route path='/' element={<Resume  />} />
+          <Route path='/projects' element={<Projects projects={projects}  />} />
+        </Routes>
+        <Footer  />
+      </div>
+    </Router>
   );
 }
 

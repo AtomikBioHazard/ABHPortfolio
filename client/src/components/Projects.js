@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -16,7 +17,7 @@ const Projects = () => {
         <div key={project.id}>
           <h2>{project.title}</h2>
           <p>{project.description}</p>
-          <a href={project.url}>{project.url}</a>
+          <NavLink to={project.url}>View Project</NavLink>
         </div>
       ))}
     </div>

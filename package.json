@@ -4,7 +4,9 @@
   "description": "Personal portfolio website created with React.js and Node.js/Express",
   "main": "server/app.js",
   "scripts": {
-    "start": "node server/app.js"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "node server/app.js",
+    "client": "cd client && npm start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/AtomikBioHazard/ABHPortfolio/issues"
   },
-  "homepage": "https://github.com/AtomikBioHazard/ABHPortfolio#readme"
+  "homepage": "https://github.com/AtomikBioHazard/ABHPortfolio#readme",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
 }

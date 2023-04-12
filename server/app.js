@@ -1,0 +1,19 @@
+const express = require('express')
+const app = express()
+
+const projectsRoutes = require('./routes/projects')
+
+app.use(express.json())
+
+app.use('/api/projects', projectsRoutes)
+
+app.get('/', (req, res) => {
+  res.send('Welcome to my personal website portfolio!')
+})
+
+const port = process.env.PORT || 3000
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`)
+})
+
+module.exports = app

@@ -1,0 +1,29 @@
+{
+  "auto-close-tag.insertSpaceBeforeSelfClosingTag": true,
+  "auto-close-tag.fullMode": true,
+  "auto-close-tag.SublimeText3Mode": true,
+  "editor.codeActionsOnSave": {
+  
+    "source.organizeImports": true,
+    "source.fixAll.eslint": true
+  },
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true,
+  "editor.minimap.autohide": true,
+  "editor.suggest.preview": true,
+  "editor.tabSize": 2,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80],
+  "editor.wordWrap": "on",
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1500,
+  "prettier.jsxSingleQuote": true,
+  "prettier.singleQuote": true,
+  "workbench.colorTheme": "Default Dark+",
+  "workbench.productIconTheme": "fluent-icons",
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.python"
+  }
+}
